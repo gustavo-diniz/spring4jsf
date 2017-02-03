@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 	<h:head>
+        <title>Carteira Clean</title>
+        <meta name="author" content="The Author"></meta>
+        <link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/default.css" /> 
+        <link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/principal.css" /> 
+        
+    </h:head>
+    <h:body style="padding-top: 50px; padding-bottom: 20px;">
+        <b:navBar brand="DashBoard" brandHref="#" inverse="true" fixed="top">
+        </b:navBar>
+        
+        <b:container>  
+        <h:form>  
+        	<br/>  
+        	<h:panelGrid columns="3">
+        		<p:outputLabel> Diga Olá </p:outputLabel>  
+        		<p:inputText value="${exemploMB.textoNome}" style="margin-left: 10px;"></p:inputText>
+	        	<p:commandButton value="exemplo action" style="margin-left: 10px;" action="${exemploMB.geraTexto()}" update="@form"></p:commandButton>
+        	</h:panelGrid>
+	        <br/>  
+	       	
+	       	<p:outputLabel value="${exemploMB.textoResposta}"></p:outputLabel>
+	        
+	        <hr/>      
+	         <footer>
+	            <p>© Company 2014</p>
+	         </footer>
+         </h:form>
+        </b:container>
+    </h:body>
+</html>
